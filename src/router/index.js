@@ -1,10 +1,9 @@
-import { defineAsyncComponent } from "vue";
 import { createRouter, createWebHistory } from "vue-router"
 
 const routes = [
     {
         path: '/',
-        name: 'Home',
+        name: 'Start',
         component: () => import('../atomic/pages/Start.vue')
     }
 ]
