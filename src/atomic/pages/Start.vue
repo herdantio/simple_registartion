@@ -4,7 +4,9 @@
       <p class="text-3xl">Start Page</p>
     </div>
     <div class="flex justify-center mt-8">
-      <RButton>Start</RButton>
+      <router-link to="/register">
+        <RButton>Start</RButton>
+      </router-link>
     </div>
   </div>
 </template>

@@ -5,6 +5,16 @@ const routes = [
         path: '/',
         name: 'Start',
         component: () => import('../atomic/pages/Start.vue')
+    },
+    {
+        path: '/register',
+        component: () => import('../atomic/pages/UserRegistration.vue'),
+        children: [
+            {
+                path: '/',
+                component: () => import('../atomic/pages/Name.vue')
+            }
+        ]
     }
 ]
 
