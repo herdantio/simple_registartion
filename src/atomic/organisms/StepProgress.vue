@@ -3,7 +3,7 @@
       <StepCurrentStatus :status="nameStatus" stepName="Nama"/>
       <StepCurrentStatus :status="nikStatus" stepName="NIK"/>
       <StepCurrentStatus :status="addressStatus" stepName="Alamat"/>
-      <StepCurrentStatus status="NOT" stepName="Tanggal Lahir"/>
+      <StepCurrentStatus :status="birthdateStatus" stepName="Tanggal Lahir"/>
       <StepCurrentStatus status="NOT" stepName="Foto"/>
   </div>
 </template>
@@ -33,6 +33,15 @@ export default {
           if (this.$route.path === '/register/address') {
             return 'CURRENT';
           }else if (this.$route.path === '/register/birthdate' || this.$route.path === '/register/photo') {
+            return 'DONE';
+          }else {
+            return 'NOT';
+          }
+        },
+        birthdateStatus() {
+          if (this.$route.path === '/register/birthdate') {
+            return 'CURRENT';
+          }else if (this.$route.path === '/register/photo') {
             return 'DONE';
           }else {
             return 'NOT';

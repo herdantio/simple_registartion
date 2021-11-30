@@ -24,7 +24,7 @@ const routes = [
             },
             {
                 path: 'birthdate',
-                component: () => import('../atomic/pages/Address.vue')
+                component: () => import('../atomic/pages/BirthDate.vue')
             },
             {
                 path: 'photo',
