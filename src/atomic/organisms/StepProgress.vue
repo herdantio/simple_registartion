@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row justify-around">
-      <StepCurrentStatus status="CURRENT" stepName="Nama"/>
-      <StepCurrentStatus status="NOT" stepName="NIK"/>
+      <StepCurrentStatus :status="nameStatus" stepName="Nama"/>
+      <StepCurrentStatus :status="nikStatus" stepName="NIK"/>
       <StepCurrentStatus status="NOT" stepName="Alamat"/>
       <StepCurrentStatus status="NOT" stepName="Tanggal Lahir"/>
       <StepCurrentStatus status="NOT" stepName="Foto"/>
@@ -11,7 +11,21 @@
 <script>
 import StepCurrentStatus from "../atoms/StepCurrentStatus.vue";
 export default {
-    components: { StepCurrentStatus }
+    components: { StepCurrentStatus },
+    computed: {
+        nameStatus() {
+            return this.$route.path === '/register/name' ? 'CURRENT' : 'DONE';
+        },
+        nikStatus() {
+          if (this.$route.path === '/register/nik') {
+            return 'CURRENT';
+          }else if (this.$route.path === '/register/address') {
+            return 'DONE';
+          }else {
+            return 'NOT';
+          }
+        },
+    },
 }
 </script>
 
