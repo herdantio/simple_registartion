@@ -2,7 +2,7 @@
   <div class="flex flex-row justify-around">
       <StepCurrentStatus :status="nameStatus" stepName="Nama"/>
       <StepCurrentStatus :status="nikStatus" stepName="NIK"/>
-      <StepCurrentStatus status="NOT" stepName="Alamat"/>
+      <StepCurrentStatus :status="addressStatus" stepName="Alamat"/>
       <StepCurrentStatus status="NOT" stepName="Tanggal Lahir"/>
       <StepCurrentStatus status="NOT" stepName="Foto"/>
   </div>
@@ -19,7 +19,20 @@ export default {
         nikStatus() {
           if (this.$route.path === '/register/nik') {
             return 'CURRENT';
-          }else if (this.$route.path === '/register/address') {
+          }else if (
+            this.$route.path === '/register/address' 
+            || this.$route.path === '/register/birthdate'
+            || this.$route.path === '/register/photo'
+            ) {
+            return 'DONE';
+          }else {
+            return 'NOT';
+          }
+        },
+        addressStatus() {
+          if (this.$route.path === '/register/address') {
+            return 'CURRENT';
+          }else if (this.$route.path === '/register/birthdate' || this.$route.path === '/register/photo') {
             return 'DONE';
           }else {
             return 'NOT';

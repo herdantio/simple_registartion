@@ -17,6 +17,18 @@ const routes = [
             {
                 path: 'nik',
                 component: () => import('../atomic/pages/NIK.vue')
+            },
+            {
+                path: 'address',
+                component: () => import('../atomic/pages/Address.vue')
+            },
+            {
+                path: 'birthdate',
+                component: () => import('../atomic/pages/Address.vue')
+            },
+            {
+                path: 'photo',
+                component: () => import('../atomic/pages/Address.vue')
             }
         ]
     }

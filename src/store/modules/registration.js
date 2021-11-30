@@ -3,6 +3,7 @@ const store = {
     state: {
         name: '',
         nik: '',
+        address: '',
     },
     mutations: {
         setName(state, name) {
@@ -10,6 +11,9 @@ const store = {
         },
         setNIK(state, nik) {
             state.nik = nik;
+        },
+        setAddress(state, address) {
+            state.address = address;
         }
     },
     actions: {
