@@ -1,9 +1,9 @@
 <template>
   <div>
-      <div>
+      <div class="mt-24 p-3">
           <StepProgress></StepProgress>
       </div>
-      <div>
+      <div class="mt-24 flex justify-center">
           <router-view></router-view>
       </div>
   </div>

@@ -1,8 +1,9 @@
 <template>
     <div class="flex flex-col justify-center items-center">
         <div class="border-black border-2 rounded-full h-6 w-6 flex justify-center items-center">
-            <span class="text-1xl" v-if="isDone">&#10003;</span>
-            <span class="text-1xl" v-else>I</span> 
+            <span class="text-1xl" v-if="status=='NOT'"></span>
+            <span class="text-1xl" v-else-if="status=='DONE'">&#10003;</span>
+            <span class="text-1xl" v-else-if="status == 'CURRENT'">I</span> 
         </div>
         <div>
             <p>
@@ -15,9 +16,9 @@
 <script>
 export default {
     props:{
-        isDone: {
-            type: Boolean,
-            default: false,
+        status: {
+            type: String,
+            default: 'NOT',
         },
         stepName: {
             type: String,

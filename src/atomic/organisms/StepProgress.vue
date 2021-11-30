@@ -1,6 +1,10 @@
 <template>
   <div class="flex flex-row justify-around">
-      <StepCurrentStatus :isDone="false" stepName="Nama"/>
+      <StepCurrentStatus status="CURRENT" stepName="Nama"/>
+      <StepCurrentStatus status="NOT" stepName="NIK"/>
+      <StepCurrentStatus status="NOT" stepName="Alamat"/>
+      <StepCurrentStatus status="NOT" stepName="Tanggal Lahir"/>
+      <StepCurrentStatus status="NOT" stepName="Foto"/>
   </div>
 </template>
 

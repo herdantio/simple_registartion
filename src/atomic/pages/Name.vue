@@ -1,10 +1,11 @@
 <template>
   <div>
       <div>
-        Nama: 
+          <input type="text" placeholder="Nama"/>
       </div>
-      <div>
-          <input type="text" />
+      <div class="flex justify-between mt-24">
+        <button class="bg-yellow-500">Prev</button>
+        <button class="bg-blue-500">Next</button>
       </div>
   </div>
 </template>
