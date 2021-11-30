@@ -11,8 +11,15 @@ const routes = [
         component: () => import('../atomic/pages/UserRegistration.vue'),
         children: [
             {
-                path: '/',
-                component: () => import('../atomic/pages/Name.vue')
+                path: 'name',
+                component: () => import('../atomic/pages/Name.vue'),
+                beforeEnter: (to, from, next) => {
+                    if(from.href == '/'){
+                        next()
+                    }else{
+                        next('/')
+                    }
+                }
             }
         ]
     }
