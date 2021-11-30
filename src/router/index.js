@@ -13,6 +13,10 @@ const routes = [
             {
                 path: 'name',
                 component: () => import('../atomic/pages/Name.vue')
+            },
+            {
+                path: 'nik',
+                component: () => import('../atomic/pages/NIK.vue')
             }
         ]
     }

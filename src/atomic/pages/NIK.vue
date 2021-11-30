@@ -1,7 +1,7 @@
 <template>
   <div>
       <div>
-          <input type="text" placeholder="Nama" v-model="name"/>
+          <input type="text" placeholder="NIK" v-model="nik"/>
       </div>
       <div class="flex justify-between mt-24">
         <button class="bg-yellow-500" @click="prev">Prev</button>
@@ -15,14 +15,14 @@ import { mapMutations } from 'vuex';
 export default {
   data(){
     return {
-      name: '',
+      nik: '',
     }
   },
   methods: {
-    ...mapMutations('registration',['setName']),
+    ...mapMutations('registration',['setNIK']),
     next(){
-      this.setName(this.name);
-      this.$router.push('/register/nik');
+      this.setNIK(this.nik);
+      this.$router.push('/register/address');
     },
     prev(){
       this.$router.back();
