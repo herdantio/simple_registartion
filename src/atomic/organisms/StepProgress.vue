@@ -4,7 +4,7 @@
       <StepCurrentStatus :status="nikStatus" stepName="NIK"/>
       <StepCurrentStatus :status="addressStatus" stepName="Alamat"/>
       <StepCurrentStatus :status="birthdateStatus" stepName="Tanggal Lahir"/>
-      <StepCurrentStatus status="NOT" stepName="Foto"/>
+      <StepCurrentStatus :status="photoStatus" stepName="Foto"/>
   </div>
 </template>
 
@@ -43,6 +43,13 @@ export default {
             return 'CURRENT';
           }else if (this.$route.path === '/register/photo') {
             return 'DONE';
+          }else {
+            return 'NOT';
+          }
+        },
+        photoStatus() {
+          if (this.$route.path === '/register/photo') {
+            return 'CURRENT';
           }else {
             return 'NOT';
           }

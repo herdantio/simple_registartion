@@ -28,7 +28,7 @@ const routes = [
             },
             {
                 path: 'photo',
-                component: () => import('../atomic/pages/Address.vue')
+                component: () => import('../atomic/pages/Photo.vue')
             }
         ]
     }

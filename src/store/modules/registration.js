@@ -4,7 +4,8 @@ const store = {
         name: '',
         nik: '',
         address: '',
-        date: ''
+        date: '',
+        photo: '',
     },
     mutations: {
         setName(state, name) {
@@ -18,7 +19,10 @@ const store = {
         },
         setDate(state, date) {
             state.date = date;
-        }   
+        },
+        setPhoto(state, photo) {
+            state.photo = photo;
+        }     
     },
     actions: {
     },
